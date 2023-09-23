@@ -12,6 +12,7 @@ public class Book extends Item implements Configuration{
 
         return type;
     }
+    
     public String getAuthor(){
         return this.author;
     }
