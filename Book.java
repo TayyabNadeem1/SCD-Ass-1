@@ -22,7 +22,6 @@ public class Book extends Item implements Configuration{
         return this.publishingYear;
     }
     
-
     public void displayInfo(){
         System.out.println("Type: Book");
         System.out.println("Title: " + this.getTitle());

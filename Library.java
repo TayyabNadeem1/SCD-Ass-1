@@ -148,7 +148,6 @@ public class Library {
                     }
                 
                     }
-                    
                         for (Item item : itemList) {
                         if(item instanceof Newspaper){
                             if(item.getTitle().equalsIgnoreCase(title_news) && count2 ==0){
