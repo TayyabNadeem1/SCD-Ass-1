@@ -6,8 +6,8 @@ public class Magazine extends Item implements Configuration{
     private String publisherCompany;
     private final int type=2;
 
-    public Magazine(String title,boolean isBorrowed, int cost, String pbComp, ArrayList<String> pbArray){
-        super(title, isBorrowed, cost);
+    public Magazine(String title,boolean isBorrowed, int cost, int popularityCount,String pbComp, ArrayList<String> pbArray){
+        super(title, false, cost,popularityCount);
         this.publisherCompany=pbComp;
         for(int i=0;i<pbArray.size();i++){
             Authors.add(pbArray.get(i));
@@ -37,6 +37,11 @@ public class Magazine extends Item implements Configuration{
         for (String author : getAuthorsMag()) {
             System.out.println("  " + author);
         }
+    }
+    @Override
+    public int calculateCost(){
+        
+     return this.getCost()*this.getPopCount();
     }
     
 }

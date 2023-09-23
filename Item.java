@@ -4,18 +4,23 @@ public class Item {
     private int popularityCount;
     private int id;
     private int cost;
+    private String name;
 
-
-    public Item(String title,boolean isBorrowed, int cost){
+    public Item(String title,boolean isBorrowed, int cost,int popularityCount){
 
         this.title=title;
         this.isBorrowed=isBorrowed;
-        //this.popularityCount=popularityCount;
+        this.popularityCount=popularityCount;
         
         this.cost=cost;
 
     }
-
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name=name;
+    }
 
     public void setTitle(String title) {
         this.title = title;
@@ -28,9 +33,25 @@ public class Item {
     public void setCost(int cost) {
         this.cost = cost;
     }
+    public int getPopCount(){
+        return popularityCount;
+    }
 
+    public void setPopCount(int count){
+         this.popularityCount=count;
+    }
+    public void incre_PopCount(){
+         this.popularityCount++;
+    }
     public void displayInfo(){
 
+    }
+    public boolean getisBorrowed(){
+        return this.isBorrowed;
+    }
+
+    public void setBorrowed(boolean val){
+        this.isBorrowed=val;
     }
 
     public int getCost(){
